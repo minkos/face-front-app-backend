@@ -11,7 +11,7 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',  //localhost
+    host : 'postgresql-flat-07932',  //localhost
     port : 5432,
     user : 'postgres',  //Owner in \d (database)
     password : 'cheeyuiming8128',
@@ -65,6 +65,8 @@ const database = {
 // Whenever server.js retart, we lose all the added data
 // ...that is why databases(i.e. SQL) is needed...
 
+//when the app first loads when deployed to heroku, the below root ('/') runs first..
+// ...'this is working' is printed as this is only an API
 app.get('/', (req, res) => {
 	res.send('this is working');
 	//res.send(database.users);
