@@ -1,3 +1,5 @@
+// Upgrade to heroku-24 stack
+
 const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
