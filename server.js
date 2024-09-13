@@ -1,4 +1,4 @@
-// Upgrade to heroku-24 stack
+// Upgraded to heroku-24 stack
 
 const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
