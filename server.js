@@ -17,14 +17,6 @@ const db = knex({
     ssl: {
     rejectUnauthorized: false
   } 
-
-    /*
-    host : '127.0.0.1' //localhost 
-    port : 5432,
-    user : 'postgres',  //Owner in \d (database)
-    password : 'cheeyuiming8128',
-    database : 'smart-brain'
-    */
   }
 });
 
@@ -38,41 +30,6 @@ const app = express();
 
 app.use(express.json()); //middleware
 app.use(cors());
-
-/*
-const database = {
-	users: [
-	{
-		id: '123',
-		name: 'John',
-		password: 'cookies',
-		email: 'john@gmail.com',
-		entries: 0,
-		joined: new Date()
-	},
-
-	{
-		id: '124',
-		name: 'Sally',
-		password: 'bananas',
-		email: 'sally@gmail.com',
-		entries: 0,
-		joined: new Date()
-	}
-	],
-	login: [
-		{
-			id: '987',
-			hash: '',
-			email: 'john@gmail.com'
-		}
-	]
-}
-*/
-
-// Everytime its saved, the top(database) got reinitialised again...not accurate if we save...
-// Whenever server.js retart, we lose all the added data
-// ...that is why databases(i.e. SQL) is needed...
 
 //when the app first loads when deployed to heroku, the below root ('/') runs first..
 // ...'this is working' is printed as this is only an API
